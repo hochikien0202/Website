@@ -1,11 +1,157 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My Portfolio</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio | One Page</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <h1>Welcome to my portfolio</h1>
-  <p>GitHub Pages is working 🎉</p>
+  <!-- Header / Navbar -->
+  <header class="header" id="top">
+    <div class="container nav">
+      <a class="brand" href="#top">
+        <span class="brand__accent">D</span>avid
+      </a>
+
+      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav__menu" aria-label="Main navigation">
+        <a href="#top" class="nav__link is-active">Home</a>
+        <a href="#about" class="nav__link">About</a>
+        <a href="#services" class="nav__link">Service</a>
+        <a href="#resume" class="nav__link">Resume</a>
+        <a href="#portfolio" class="nav__link">Portfolio</a>
+        <a href="#blog" class="nav__link">Blog</a>
+        <a href="#contact" class="nav__link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section class="hero" aria-label="Hero">
+      <!-- background image (optional) -->
+      <div class="hero__bg" role="img" aria-label="Background"></div>
+
+      <!-- dark overlay -->
+      <div class="hero__overlay"></div>
+
+      <!-- particles canvas -->
+      <canvas id="particles" class="hero__canvas" aria-hidden="true"></canvas>
+
+      <div class="container hero__content">
+        <p class="hero__kicker">Hi, I'm <span class="accent">David</span></p>
+        <h1 class="hero__title">I Am Web Developer<span class="cursor">|</span></h1>
+        <p class="hero__subtitle">
+          I build clean, responsive websites and simple web apps. This template is pure HTML/CSS/JS.
+        </p>
+
+        <div class="hero__actions">
+          <a class="btn btn--ghost" href="#portfolio">View Work</a>
+          <a class="btn btn--outline" href="#contact">Hire Me</a>
+        </div>
+      </div>
+
+      <a class="scroll" href="#about" aria-label="Scroll to About">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- About -->
+    <section class="section section--dark" id="about">
+      <div class="container">
+        <h2 class="section__title">About <span class="accent">MySelf</span></h2>
+        <p class="section__desc">
+          Replace this text with your real bio: what you do, what you’re learning, and what you’re aiming for.
+          Keep it short and specific.
+        </p>
+
+        <div class="grid">
+          <div class="card">
+            <h3>Quick intro</h3>
+            <p>
+              I’m a student / junior developer focusing on building modern web pages and small projects.
+              I enjoy solving bugs, learning new tech, and shipping clean UI.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Skills</h3>
+            <ul class="list">
+              <li>HTML, CSS, JavaScript</li>
+              <li>Git & GitHub Pages</li>
+              <li>Responsive UI, basic animations</li>
+              <li>PHP/MySQL (optional)</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Focus</h3>
+            <p>
+              I’m currently building small portfolio projects: landing pages, simple apps, and school assignments.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Placeholder sections to match navbar -->
+    <section class="section" id="services">
+      <div class="container">
+        <h2 class="section__title">My <span class="accent">Service</span></h2>
+        <p class="section__desc">Add 3–6 services here (Web design, Landing page, Bug fixes, etc.).</p>
+      </div>
+    </section>
+
+    <section class="section" id="resume">
+      <div class="container">
+        <h2 class="section__title">My <span class="accent">Resume</span></h2>
+        <p class="section__desc">Add your experience + education timeline here.</p>
+      </div>
+    </section>
+
+    <section class="section" id="portfolio">
+      <div class="container">
+        <h2 class="section__title">My <span class="accent">Portfolio</span></h2>
+        <p class="section__desc">Add project cards with links (GitHub, live demo).</p>
+      </div>
+    </section>
+
+    <section class="section" id="blog">
+      <div class="container">
+        <h2 class="section__title">My <span class="accent">Blog</span></h2>
+        <p class="section__desc">Optional. Add posts later.</p>
+      </div>
+    </section>
+
+    <section class="section section--dark" id="contact">
+      <div class="container">
+        <h2 class="section__title">Contact <span class="accent">Me</span></h2>
+        <p class="section__desc">Add email + LinkedIn here.</p>
+
+        <div class="contact">
+          <a class="contact__item" href="mailto:your@email.com">your@email.com</a>
+          <a class="contact__item" href="#" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="contact__item" href="#" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p>© <span id="year"></span> Your Name. Built with HTML/CSS/JS.</p>
+        <a class="to-top" href="#top">Back to top ↑</a>
+      </div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
